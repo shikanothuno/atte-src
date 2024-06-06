@@ -1,0 +1,47 @@
+#body {
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    background-color: #F2F2F2;
+    margin: 0;
+    padding: 0;
+}
+
+.message {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.link-container {
+    text-align: center;
+}
+
+.link__table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.link {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block;
+    font-size: 18px;
+    height: 100px;
+    margin: 20px;
+    padding: 40px;
+    text-align: center;
+    text-decoration: none;
+    width: 200px;
+}
+
+.link-disenable {
+    color: #E5E5E5;
+    pointer-events: none;
+}
+
+.link-enable {
+    color: black;
+}

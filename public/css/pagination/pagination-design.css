@@ -1,0 +1,26 @@
+nav {
+    display: flex;
+}
+
+td, th {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    background-color: white;
+    color: blue;
+    display: inline-block;
+    text-decoration: none;
+    width: 30px;
+}
+
+span {
+    display: inline-block;
+    width: 30px;
+}
+
+span.page-link {
+    background-color: #2384CF;
+    color: white;
+}

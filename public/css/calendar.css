@@ -1,0 +1,51 @@
+#main {
+    align-items: center;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.month-navigation {
+    margin-bottom: 20px;
+}
+
+.month-back-next {
+    border: 1px solid #748FEC;
+    border-radius: 2px;
+    color: #748FEC;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.month {
+    display: inline;
+    font-size: 24px;
+}
+
+
+#table {
+    align-items: center;
+    border-collapse: collapse;
+}
+
+#table td,th {
+    border-color: #909090;
+    border-style: solid;
+    border-width: 1px 0px;
+    margin : 0px;
+    padding: 20px;
+    text-align: center;
+}
+
+#table td {
+    font-weight: bold;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
