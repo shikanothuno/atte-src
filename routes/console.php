@@ -13,17 +13,13 @@ Artisan::command('inspire', function () {
 })->purpose('Display an inspiring quote')->hourly();
 
 Schedule::call(function(){
-    Log::debug(date("Y-m-d H:i:s"));
-});
-
-Schedule::call(function(){
     $users = User::all();
     $yesterday = date("Y-m-d H:i:s",strtotime(date("Y-m-d") . " -1 day" . "00:00:00"));
     $today = date("Y-m-d H:i:s",strtotime(date("Y-m-d" . "00:00:00")));
     foreach($users as $user){
         if($user->breaking){
             $break_time_collection_yesterday = BreakTime::where("user_id","=",$user->id)->where("date","=",$yesterday)->get();
-            $break_time_yestarday = BreakTime::find($break_time_collection_yesterday[count($break_time_collection_yesterday)-1]);
+            $break_time_yestarday = BreakTime::find($break_time_collection_yesterday[count($break_time_collection_yesterday)-1]->id);
 
             $break_time_yestarday->end_time = date("Y-m-d H:i:s",strtotime(date("Y-m-d",strtotime($yesterday) ). "23:59:59"));
             $break_time_yestarday->save();
@@ -53,4 +49,4 @@ Schedule::call(function(){
 
         }
     }
-})->daily();
+})->everyMinute();

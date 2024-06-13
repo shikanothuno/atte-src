@@ -16,6 +16,11 @@
                 @if (Request::routeIs("attendance")||Request::routeIs("showList")||Request::routeIs("calendar.show")||Request::routeIs("home"))
                 <table class="header__table">
                     <tr>
+                        @if (Request::routeIs("home"))
+                            <td><a class="nav__a" href="{{ route("attendance") }}">打刻ページ</a></td>
+                            <td><a class="nav__a" href="{{ route("userList") }}">ユーザーリスト</a></td>
+                        @endif
+
                         <td><a class="nav__a" href="{{ route("home",date("Y-m")) }}">ホーム</a></td>
                         <td><a class="nav__a" href="{{ route("calendar.show",date("Y-m")) }}">日付一覧</a></td>
                         <td>
@@ -24,10 +29,6 @@
                                 <button class="logout-button">ログアウト</button>
                             </form>
                         </td>
-                        @if (Request::routeIs("home"))
-                            <td><a class="nav__a" href="{{ route("attendance") }}">打刻ページ</a></td>
-                            <td><a class="nav__a" href="{{ route("userList") }}">ユーザーリスト</a></td>
-                        @endif
                     </tr>
                 </table>
                 @endif
